@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function Square({value, onClick}) {
     return (
@@ -53,27 +54,54 @@ function Game() {
     }
 
     return (
-        <div className="container">
-            <div className="game">
-                <div className="game-board">
-                    <div className="board-row">
-                        {renderSquare(0)}
-                        {renderSquare(1)}
-                        {renderSquare(2)}
+        <div>
+            <h2 className= "title">TicTacToe</h2>
+            <div className="container">
+                <div className="game">
+                    <div className="game-board">
+                        <div className="board-row">
+                            <div className="row no-gutters">
+                                <div className="col">
+                                    {renderSquare(0)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(1)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(2)}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="board-row">
+                            <div className="row no-gutters">
+                                <div className="col">
+                                    {renderSquare(3)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(4)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(5)}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="board-row">
+                            <div className="row no-gutters">
+                                <div className="col">
+                                    {renderSquare(6)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(7)}
+                                </div>
+                                <div className="col">
+                                    {renderSquare(8)}
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="board-row">
-                        {renderSquare(3)}
-                        {renderSquare(4)}
-                        {renderSquare(5)}
-                    </div>
-                    <div className="board-row">
-                        {renderSquare(6)}
-                        {renderSquare(7)}
-                        {renderSquare(8)}
-                    </div>
+                    <div className="game-info">{getStatus()}</div>
+                    <div className="restart-button">{renderRestartButton()}</div>
                 </div>
-                <div className="game-info">{getStatus()}</div>
-                <div className="restart-button">{renderRestartButton()}</div>
             </div>
         </div>
     );
