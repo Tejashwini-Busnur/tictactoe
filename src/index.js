@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-//import 'bootstrap/dist/css/bootstrap.css';
-import 'w3-css/w3.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function Square({value, onClick}) {
 
@@ -58,18 +57,18 @@ function Game() {
     return (
         <div>
             <h2 className= "title">TicTacToe</h2>
-            <div className="container ">
+            <div className="container">
                 <div className="game">
                     <div className="game-board">
                         <div className="board-row">
-                            <div className="w3-row no-gutters">
-                                <div className="w3-col l7 m3 s4">
+                            <div className="row no-gutters">
+                                <div className="col">
                                     {renderSquare(0)}
                                 </div>
-                                <div className="w3-col l7 m3 s4">
+                                <div className="col">
                                     {renderSquare(1)}
                                 </div>
-                                <div className="w3-col l7 m3 s4">
+                                <div className="col">
                                     {renderSquare(2)}
                                 </div>
                             </div>
@@ -113,7 +112,7 @@ function Restart({onClick}) {
 
     return (
         <button className="restart" onClick={onClick}>
-            Start New game
+            New game
         </button>
     );
 }
